@@ -1,0 +1,130 @@
+body {
+    text-align: center;
+    background-color: white;
+    color: black;
+    font-family: 'Perpetua';
+    align-content:center;
+}
+
+.header-container {
+    position: relative;
+}
+
+.header-image {
+    width: 80%;
+}
+
+.quote {
+    position: static;
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+}
+.quote-text {
+    font-size: 30px;
+    font-style: italic;
+    word-wrap: break-word;
+    text-align:right;
+}
+
+
+p {
+    margin: 0 auto;
+    font-size: 1.5em;
+    letter-spacing: .025em;
+    text-align: justify;
+}
+
+.content {
+    width:80%;
+    margin:auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    font-weight: normal;
+}
+
+.shop-title {
+    font-size: 20px;
+}
+
+.separator {
+    width: 10%;
+    height: 2px;
+    background-color: black;
+    margin: 20px auto 50px;
+}
+
+footer div.separator{
+    background:#bbbbbb;
+    width:100%;
+}
+
+.brands-title {
+    margin-top: 30px;
+}
+
+.link-text {
+    color: black;
+    text-decoration: none;
+}
+
+.link-text:hover{
+    text-decoration:underline;
+}
+
+.products-description {
+    margin-bottom: 50px;
+}
+
+.scroll-container {
+    display: flex;
+    overflow: auto;
+}
+
+.product {
+    margin-right: 3%;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.product img {
+    display: block;
+    width: 15em;
+    height: 20em;
+    margin-bottom: 20px;
+}
+
+.product .separator {
+    width: 30%;
+}
+
+footer {
+    display:flex;
+    margin: auto auto;
+    margin-top: 10%;
+    width:80%;
+    margin-bottom:5%;
+}
+
+footer.separator{
+    margin: 5%, 0;
+}
+
+footer a{
+    font-size:150%;
+    margin: 10px;
+}
+
+.container-links {
+    margin-top: 5%;
+}

@@ -1,0 +1,125 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Artem\\source\\repos\\BottleWebProject2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2419485B-8014-4053-996B-56A24AB01A92}|BottleWebProject2\\BottleWebProject2.pyproj|C:\\Users\\Artem\\source\\repos\\BottleWebProject2\\BottleWebProject2\\routes.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{2419485B-8014-4053-996B-56A24AB01A92}|BottleWebProject2\\BottleWebProject2.pyproj|solutionrelative:BottleWebProject2\\routes.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2419485B-8014-4053-996B-56A24AB01A92}|BottleWebProject2\\BottleWebProject2.pyproj|C:\\Users\\Artem\\source\\repos\\BottleWebProject2\\BottleWebProject2\\views\\layout.tpl||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{2419485B-8014-4053-996B-56A24AB01A92}|BottleWebProject2\\BottleWebProject2.pyproj|solutionrelative:BottleWebProject2\\views\\layout.tpl||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2419485B-8014-4053-996B-56A24AB01A92}|BottleWebProject2\\BottleWebProject2.pyproj|C:\\Users\\Artem\\source\\repos\\BottleWebProject2\\BottleWebProject2\\views\\about_us.tpl||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{2419485B-8014-4053-996B-56A24AB01A92}|BottleWebProject2\\BottleWebProject2.pyproj|solutionrelative:BottleWebProject2\\views\\about_us.tpl||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2419485B-8014-4053-996B-56A24AB01A92}|BottleWebProject2\\BottleWebProject2.pyproj|C:\\Users\\Artem\\source\\repos\\BottleWebProject2\\BottleWebProject2\\views\\index.tpl||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{2419485B-8014-4053-996B-56A24AB01A92}|BottleWebProject2\\BottleWebProject2.pyproj|solutionrelative:BottleWebProject2\\views\\index.tpl||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2419485B-8014-4053-996B-56A24AB01A92}|BottleWebProject2\\BottleWebProject2.pyproj|C:\\Users\\Artem\\source\\repos\\BottleWebProject2\\BottleWebProject2\\views\\catalog.tpl||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{2419485B-8014-4053-996B-56A24AB01A92}|BottleWebProject2\\BottleWebProject2.pyproj|solutionrelative:BottleWebProject2\\views\\catalog.tpl||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2419485B-8014-4053-996B-56A24AB01A92}|BottleWebProject2\\BottleWebProject2.pyproj|C:\\Users\\Artem\\source\\repos\\BottleWebProject2\\BottleWebProject2\\app.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{2419485B-8014-4053-996B-56A24AB01A92}|BottleWebProject2\\BottleWebProject2.pyproj|solutionrelative:BottleWebProject2\\app.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "about_us.tpl",
+              "DocumentMoniker": "C:\\Users\\Artem\\source\\repos\\BottleWebProject2\\BottleWebProject2\\views\\about_us.tpl",
+              "RelativeDocumentMoniker": "BottleWebProject2\\views\\about_us.tpl",
+              "ToolTip": "C:\\Users\\Artem\\source\\repos\\BottleWebProject2\\BottleWebProject2\\views\\about_us.tpl",
+              "RelativeToolTip": "BottleWebProject2\\views\\about_us.tpl",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-03-18T19:01:40.686Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "routes.py",
+              "DocumentMoniker": "C:\\Users\\Artem\\source\\repos\\BottleWebProject2\\BottleWebProject2\\routes.py",
+              "RelativeDocumentMoniker": "BottleWebProject2\\routes.py",
+              "ToolTip": "C:\\Users\\Artem\\source\\repos\\BottleWebProject2\\BottleWebProject2\\routes.py",
+              "RelativeToolTip": "BottleWebProject2\\routes.py",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABwAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2024-03-18T18:59:04.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "catalog.tpl",
+              "DocumentMoniker": "C:\\Users\\Artem\\source\\repos\\BottleWebProject2\\BottleWebProject2\\views\\catalog.tpl",
+              "RelativeDocumentMoniker": "BottleWebProject2\\views\\catalog.tpl",
+              "ToolTip": "C:\\Users\\Artem\\source\\repos\\BottleWebProject2\\BottleWebProject2\\views\\catalog.tpl",
+              "RelativeToolTip": "BottleWebProject2\\views\\catalog.tpl",
+              "ViewState": "AQIAAKAAAAAAAAAAAAAgwAwBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-03-18T18:58:41.688Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "app.py",
+              "DocumentMoniker": "C:\\Users\\Artem\\source\\repos\\BottleWebProject2\\BottleWebProject2\\app.py",
+              "RelativeDocumentMoniker": "BottleWebProject2\\app.py",
+              "ToolTip": "C:\\Users\\Artem\\source\\repos\\BottleWebProject2\\BottleWebProject2\\app.py",
+              "RelativeToolTip": "BottleWebProject2\\app.py",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2024-03-18T18:55:30.966Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "index.tpl",
+              "DocumentMoniker": "C:\\Users\\Artem\\source\\repos\\BottleWebProject2\\BottleWebProject2\\views\\index.tpl",
+              "RelativeDocumentMoniker": "BottleWebProject2\\views\\index.tpl",
+              "ToolTip": "C:\\Users\\Artem\\source\\repos\\BottleWebProject2\\BottleWebProject2\\views\\index.tpl",
+              "RelativeToolTip": "BottleWebProject2\\views\\index.tpl",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-03-18T18:54:49.084Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "layout.tpl",
+              "DocumentMoniker": "C:\\Users\\Artem\\source\\repos\\BottleWebProject2\\BottleWebProject2\\views\\layout.tpl",
+              "RelativeDocumentMoniker": "BottleWebProject2\\views\\layout.tpl",
+              "ToolTip": "C:\\Users\\Artem\\source\\repos\\BottleWebProject2\\BottleWebProject2\\views\\layout.tpl",
+              "RelativeToolTip": "BottleWebProject2\\views\\layout.tpl",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-03-18T18:54:12.764Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
