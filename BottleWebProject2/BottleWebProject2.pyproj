@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
+    <Content Include="static\content\about_us_style.css" />
     <Content Include="static\content\bootstrap.css" />
     <Content Include="static\content\bootstrap.min.css" />
     <Content Include="static\content\site.css" />
@@ -53,11 +54,19 @@
     <Content Include="static\images\Black%28T-shirt%292.jpeg" />
     <Content Include="static\images\BlackJeans.jpeg" />
     <Content Include="static\images\BlueJeans.jpeg" />
+    <Content Include="static\images\coat.jpg" />
     <Content Include="static\images\Hoodie.jpeg" />
     <Content Include="static\images\Jacket.jpeg" />
+    <Content Include="static\images\mini.jpg" />
+    <Content Include="static\images\outfit.jpg" />
+    <Content Include="static\images\polo_for_men.png" />
+    <Content Include="static\images\polo_for_women.png" />
     <Content Include="static\images\Shirt.jpeg" />
+    <Content Include="static\images\suit.png" />
     <Content Include="static\images\T-Shirt.jpeg" />
+    <Content Include="static\images\top_photo.png" />
     <Content Include="static\images\Trousers.jpeg" />
+    <Content Include="static\images\wardrobe.jpg" />
     <Content Include="static\images\White%28T-Shirt%29.jpeg" />
     <Content Include="static\images\WhiteShirt.jpeg" />
     <Content Include="static\images\Love.png" />
@@ -76,8 +85,12 @@
     <Content Include="static\scripts\respond.js" />
     <Content Include="static\scripts\respond.min.js" />
     <Content Include="static\scripts\_references.js" />
-    <Content Include="views\about.tpl" />
-    <Content Include="views\contact.tpl" />
+    <Content Include="views\about_us.tpl">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\catalog.tpl">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="views\index.tpl" />
     <Content Include="views\layout.tpl" />
   </ItemGroup>
