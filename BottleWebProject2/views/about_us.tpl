@@ -13,6 +13,7 @@
     />
   </head>
   <body>
+  % rebase('layout.tpl', title='Home Page', year=year)
     <div class="header-container">
       <img src="static/images/top_photo.png" class="header-image" />
       <div class="quote">

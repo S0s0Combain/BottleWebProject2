@@ -115,6 +115,7 @@
 </head>
 
 <body>
+% rebase('layout.tpl', title='Home Page', year=year)
     <div class="container">
         <div class="links">
             <div class="texttt">
