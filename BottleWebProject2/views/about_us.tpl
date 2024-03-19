@@ -13,6 +13,13 @@
     />
   </head>
   <body>
+      <nav>
+        <ul>
+            <li><a class="nav-link" href="\">AnForce</a></li>
+            <li><a class="nav-link" href="\catalog">Catalog</a></li>
+            <li><a class="nav-link" href="\about_us">About Us</a></li>
+        </ul>
+    </nav>
     <div class="header-container">
       <img src="static/images/top_photo.png" class="header-image" />
       <div class="quote">
@@ -107,4 +114,3 @@
     </footer>
   </body>
 </html>
-
