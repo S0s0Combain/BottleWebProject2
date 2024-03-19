@@ -22,7 +22,7 @@ def about():
     return dict(
         title='About',
         message='Your application description page.',
-        year=datetime.now().year
+        year=datetime.now().year,
     )
 
 @route('/catalog')
@@ -32,7 +32,8 @@ def about():
     return dict(
         title='Catalog',
         message='Catalog',
-        year=datetime.now().year
+        year=datetime.now().year,
+        
     )
 
 @route('/static/<filename:path>')

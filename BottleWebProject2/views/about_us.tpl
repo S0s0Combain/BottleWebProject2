@@ -22,7 +22,6 @@
         </p>
       </div>
     </div>
-
     <div class="content">
       <h1>About Us</h1>
       <p>
