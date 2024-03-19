@@ -125,3 +125,7 @@ footer a {
 .container-links {
     margin-top: 5%;
 }
+
+.link-text:hover {
+    text-decoration: underline;
+}

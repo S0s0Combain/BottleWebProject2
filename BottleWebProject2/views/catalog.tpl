@@ -22,9 +22,9 @@
             AnFORCE
             </div>
             
-            <a href="https://ru.pinterest.com/pin/983262531132708974/">MEN</a>
+            <a href="https://ru.pinterest.com/pin/983262531132708974/" class="link-text">MEN</a>
 
-            <a href="https://ozon.com">WOMEN</a>
+            <a href="https://ozon.com" class="link-text" >WOMEN</a>
         </div>
 
         <div class="catalog">
