@@ -3,119 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: 'Perpetua';
-            background-color: #ffffff; /* Чисто белый цвет фона */
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .texttt{
-            text-decoration: none;
-            text-align: center;
-            font-size: 120px;
-            color: #000000;
-            letter-spacing: .05em
-        }
-
-        .links {
-            text-align: center;
-            margin: 20px 10px; /* увеличенное расстояние между ссылками */
-        }
-
-        .links a {
-            display: inline-block;
-            font-size: 20px;
-            color: #333;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        .catalog {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            margin-top: 30px;
-        }
-
-        .item {
-            width: 500px; /* Фиксированная ширина карточки */
-            height: 600px;
-            margin-bottom: 10px;
-            margin-right: 2px; /* Расстояние между карточками */
-            padding: 10px;
-            text-align: center;
-            box-sizing: border-box;
-
-            overflow: hidden; /* Скрытие частей контента, выходящего за границы карточки */
-        }
-
-        .item p {
-            margin: 0;
-        }
-
-       
-
-
-        .item-content {
-            position: relative;
-        }
-
-        .item-content img {
-            width: 100%;
-            max-height: 20%;
-            object-fit: contain; /* Сохранение пропорций и вписывание изображения в блок */
-            display: block;
-            margin:0;
-        }
-
-        .product-name {
-            color: #000; /* Черный цвет текста */
-            font-size: 18px; /* Подстройте размеры шрифта под ваши требования */
-            text-align: center;
-            padding: 2px; /* Подстройте отступы под ваши требования */
-        }
-
-        .product-price {
-            color: #000; /* Черный цвет текста */
-            font-size: 18px; /* Подстройте размеры шрифта под ваши требования */
-            text-align: center;
-            padding: 2px;
-            font-weight: bold; /* Жирный шрифт */
-        }
-
-        .item-link {
-            display: block;
-             text-decoration-color: black;
-            color: inherit; /* Используем цвет обычного текста */
-        }
-
-        .item-link:hover {
-            text-decoration: none; /* Убираем подчеркивание при наведении */
-        }
-
-        .item:hover {
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .love-icon {
-            position: absolute;
-            top: 10px; /* Расположение вверху */
-            left: 200px; /* Расположение справа */
-            width: 30px; /* Ширина иконки */
-            height: 30px; /* Высота иконки */
-            z-index: 1; /* Чтобы иконка была поверх основного изображения */
-        }
-
-    </style>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="static/content/catalog.css"
+    />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
 </head>
 
 <body>
-% rebase('layout.tpl', title='Home Page', year=year)
+% rebase('layout.tpl', title='Catalog', year=year)
     <div class="container">
         <div class="links">
             <div class="texttt">
@@ -124,7 +24,7 @@
             
             <a href="https://ru.pinterest.com/pin/983262531132708974/">MEN</a>
 
-            <a href="women.html">WOMEN</a>
+            <a href="https://ozon.com">WOMEN</a>
         </div>
 
         <div class="catalog">
@@ -265,6 +165,14 @@
             </a>
         </div>
     </div>
+    <footer>
+        <div class="container-links">
+            <a href="https://www.instagram.com/ralphlauren/" target="_blank"><i class="fab fa-instagram" title="Go to Instagram brand"></i></a>
+            <a href="https://www.pinterest.com/ralphlauren/" target="_blank"><i class="fab fa-pinterest" title="Go to Telegram brand"></i></a>
+            <a href="https://www.facebook.com/RalphLauren/" target="_blank"><i class="fab fa-facebook" title="Go to Facebook brand"></i></a>
+            <a href="https://www.youtube.com/user/RLTVralphlauren" target="_blank"><i class="fab fa-youtube" title="Go to YouTube brand"></i></a>
+        </div>
+    </footer>
 </body>
 </html>
 

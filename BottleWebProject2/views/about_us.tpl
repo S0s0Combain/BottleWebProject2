@@ -13,7 +13,6 @@
     />
   </head>
   <body>
-  % rebase('layout.tpl', title='Home Page', year=year)
     <div class="header-container">
       <img src="static/images/top_photo.png" class="header-image" />
       <div class="quote">
@@ -105,7 +104,7 @@
         <a href="https://www.facebook.com/RalphLauren/" target="_blank"><i class="fab fa-facebook" title="Go to Facebook brand"></i></a>
         <a href="https://www.youtube.com/user/RLTVralphlauren" target="_blank"><i class="fab fa-youtube" title="Go to YouTube brand"></i></a>
         </div>
-      </footer>
+    </footer>
   </body>
 </html>
 
