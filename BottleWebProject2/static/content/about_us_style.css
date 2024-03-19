@@ -3,7 +3,8 @@ body {
     background-color: white;
     color: black;
     font-family: 'Perpetua';
-    align-content:center;
+    align-content: center;
+    margin: 0;
 }
 
 .header-container {
@@ -16,15 +17,16 @@ body {
 
 .quote {
     position: static;
-    width:80%;
-    margin-left:auto;
-    margin-right:auto;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 .quote-text {
     font-size: 30px;
     font-style: italic;
     word-wrap: break-word;
-    text-align:right;
+    text-align: right;
 }
 
 
@@ -36,8 +38,8 @@ p {
 }
 
 .content {
-    width:80%;
-    margin:auto;
+    width: 80%;
+    margin: auto;
 }
 
 h1 {
@@ -63,9 +65,9 @@ h2 {
     margin: 20px auto 50px;
 }
 
-footer div.separator{
-    background:#bbbbbb;
-    width:100%;
+footer div.separator {
+    background: #bbbbbb;
+    width: 100%;
 }
 
 .brands-title {
@@ -77,9 +79,9 @@ footer div.separator{
     text-decoration: none;
 }
 
-.link-text:hover{
-    text-decoration:underline;
-}
+    .link-text:hover {
+        text-decoration: underline;
+    }
 
 .products-description {
     margin-bottom: 50px;
@@ -97,34 +99,67 @@ footer div.separator{
     flex-direction: column;
 }
 
-.product img {
-    display: block;
-    width: 15em;
-    height: 20em;
-    margin-bottom: 20px;
-}
+    .product img {
+        display: block;
+        width: 15em;
+        height: 20em;
+        margin-bottom: 20px;
+    }
 
-.product .separator {
-    width: 30%;
-}
+    .product .separator {
+        width: 30%;
+    }
 
 footer {
-    display:flex;
+    display: flex;
     margin: auto auto;
     margin-top: 10%;
-    width:80%;
-    margin-bottom:5%;
+    width: 80%;
+    margin-bottom: 5%;
 }
 
-footer.separator{
-    margin: 5%, 0;
-}
+    footer.separator {
+        margin: 5%, 0;
+    }
 
-footer a{
-    font-size:150%;
-    margin: 10px;
-}
+    footer a {
+        font-size: 150%;
+        margin: 10px;
+    }
 
 .container-links {
     margin-top: 5%;
 }
+
+nav {
+    background-color: #333;
+    margin: 0;
+    height: 3em;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    align-items: center;
+    margin-left: 10%;
+}
+
+li {
+    margin-right: 20px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: 15px;
+    color: #999999;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+    .nav-link:hover {
+        color: white;
+    }
