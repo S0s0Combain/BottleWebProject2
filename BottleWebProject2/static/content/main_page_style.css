@@ -1,0 +1,300 @@
+
+
+.container_Main {
+    display: block;
+    background-image: url("/static/images/Image_First.jpg");
+    justify-content: left;
+    align-items: center;
+    height: 100vh;
+    /*background-image: url('bg.jpg');*/ /* Подставьте путь к изображению фона */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: left;
+}
+
+
+.container_Main_2 {
+    display: block;
+    background-image: url("/static/images/This_Nature_Image.jpg");
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /*background-image: url('bg.jpg');*/ /* Подставьте путь к изображению фона */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: left;
+}
+
+h1_Main {
+    display: block;
+    text-align: center;
+    font-size: 3em;
+    letter-spacing: 2px;
+    font-family: Perpetua;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Добавление тени к тексту */
+    /* Дополнительные стили по желанию */
+    margin-top: 10px;
+}
+
+h2_Main {
+    display: block;
+    font-size: 3em;
+    letter-spacing: 2px;
+    font-family: Perpetua;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Добавление тени к тексту */
+    /* Дополнительные стили по желанию */
+    margin-top: 0px;
+}
+
+p_Main {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    font-family: 'Perpetua';
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    opacity: 0.8;
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-family: 'Perpetua';
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 2em;
+    transition: background-color 0.3s;
+}
+
+.a::after {
+    color: white;
+    position: absolute;
+    align-items: center;
+    left: 0px;
+    content: '';
+    height: 40px;
+    width: 275px;
+    border-bottom: solid 1px white;
+    transition: left 0.6s ease-in-out, right 0.6s ease-in-out;
+    opacity: 0;
+}
+
+.a:hover:after {
+    text-decoration: underline;
+    color: white;
+}
+
+navbar navbar-inverse navbar-fixed-top {
+}
+
+.button_Main {
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: center block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+    .button_Main::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px; /* Высота нижней границы */
+        background-color: transparent; /* Цвет нижней границы по умолчанию */
+        transition: all 0.3s; /* Плавное изменение для анимации */
+    }
+
+    .button_Main:hover::after {
+        background-color: white; /* Цвет выделенной нижней границы */
+    }
+
+    .button_Main:active {
+        transform: translateY(2px);
+    }
+
+.swiper-container {
+    width: 100%;
+    height: 300px; /* Укажите желаемую высоту слайдера */
+}
+
+.swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fff;
+    font-size: 20px;
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+.products-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.product {
+    margin-right: 20px;
+    flex: 0 0 auto;
+}
+
+    .product img {
+        width: 700px;
+        height: 500px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+.product-info {
+    text-align: center;
+}
+
+.product-name {
+    font-size: 1em;
+    font-weight: normal;
+    font-family: Perpetua;
+    color: black;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.product-price {
+    color: black;
+    font-family: Perpetua;
+    font-size: 1em;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.footer_Main {
+    width: 100%;
+    height: 100%;
+    background-color: black; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    padding: 20px; /* Отступ внутри блока */
+    text-align: left; /* Выравнивание текста по центру */
+}
+
+.footer_Main-address {
+    font-weight: normal; /* Шрифт */
+    font-family: 'Perpetua';
+    font-size: 20px;
+}
+
+.footer_Main-phone {
+    margin-top: 10px; /* Отступ сверху */
+}
+
+.footer_Main a {
+    color: #fff; /* Цвет ссылок */
+    text-decoration: none; /* Убрать подчеркивание у ссылок */
+}
+
+    .footer_Main a:hover {
+        text-decoration: underline; /* Подчеркнутый текст при наведении на ссылку */
+    }
+
+text_Main {
+    display: block;
+    color: darkslategray;
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Perpetua';
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    margin-top: 100px;
+    opacity: 0.8;
+    color: white;
+}
+
+.a:hover {
+    text-decoration: underline;
+}
+
+.separator {
+    display: inline;
+    width: 10%;
+    height: 2px;
+    background-color: black;
+    margin: 20px auto 50px;
+}
+
+.a_Spec {
+    color: white;
+    text-decoration: none;
+    display: inline;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+footer div.separator {
+    background: #bbbbbb;
+    width: 100%;
+}
+
+footer {
+    display: flex;
+    margin: auto auto;
+    margin-top: 10px;
+    width: 80%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+    footer.separator {
+        margin: 0, 0, 0, 0;
+    }
+
+    footer a {
+        font-size: 150%;
+        margin: 1px;
+    }
+
+.container-links {
+    display: block-inline;
+    margin-top: 5%;
+}
+
+.links {
+    text-align: center;
+    margin: 20px 10px; /* увеличенное расстояние между ссылками */
+}
+
+    .links a {
+        display: inline-block;
+        font-size: 20px;
+        color: #333;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+.link-text:hover {
+    text-decoration: underline;
+}

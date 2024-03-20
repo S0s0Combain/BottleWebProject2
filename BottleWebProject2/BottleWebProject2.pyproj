@@ -45,6 +45,7 @@
     <Content Include="static\content\bootstrap.css" />
     <Content Include="static\content\bootstrap.min.css" />
     <Content Include="static\content\catalog.css" />
+    <Content Include="static\content\main_page_style.css" />
     <Content Include="static\content\site.css" />
     <Content Include="static\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="static\fonts\glyphicons-halflings-regular.svg" />
@@ -57,6 +58,7 @@
     <Content Include="static\images\BlueJeans.jpeg" />
     <Content Include="static\images\coat.jpg" />
     <Content Include="static\images\Hoodie.jpeg" />
+    <Content Include="static\images\Image_First.jpg" />
     <Content Include="static\images\Jacket.jpeg" />
     <Content Include="static\images\mini.jpg" />
     <Content Include="static\images\outfit.jpg" />
@@ -65,6 +67,7 @@
     <Content Include="static\images\Shirt.jpeg" />
     <Content Include="static\images\suit.png" />
     <Content Include="static\images\T-Shirt.jpeg" />
+    <Content Include="static\images\This_Nature_Image.jpg" />
     <Content Include="static\images\top_photo.png" />
     <Content Include="static\images\Trousers.jpeg" />
     <Content Include="static\images\wardrobe.jpg" />
@@ -94,6 +97,7 @@
     </Content>
     <Content Include="views\index.tpl" />
     <Content Include="views\layout.tpl" />
+    <Content Include="views\navbar_main.tpl" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
   <!-- Specify pre- and post-build commands in the BeforeBuild and 
