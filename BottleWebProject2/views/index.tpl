@@ -143,7 +143,7 @@
               <div class="separator">
                   <div class="container-links">
                     <a class="a_Spec" href="https://www.instagram.com/ralphlauren/" target="_blank"><i class="fab fa-instagram" title="Go to Instagram brand"></i></a>
-                    <a class="a_Spec" href="https://www.pinterest.com/ralphlauren/" target="_blank"><i class="fab fa-pinterest" title="Go to Telegram brand"></i></a>
+                    <a class="a_Spec" href="https://www.telegram.com/ralphlauren/" target="_blank"><i class="fab fa-telegram" title="Go to Telegram brand"></i></a>
                     <a class="a_Spec" href="https://www.facebook.com/RalphLauren/" target="_blank"><i class="fab fa-facebook" title="Go to Facebook brand"></i></a>
                     <a class="a_Spec" href="https://www.youtube.com/user/RLTVralphlauren" target="_blank"><i class="fab fa-youtube" title="Go to YouTube brand"></i></a>
                   </div>

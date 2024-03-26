@@ -18,11 +18,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <li><a href="/" class="navbar-brand">Application name</a></li>
+               <!-- <li><a href="/" class="navbar-brand">Application name</a></li>-->
+               
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="/catalog">Catalog</a></li>
+                   <li><a href="/catalog">Catalog</a></li>
                     <li><a href="/about_us">About Us</a></li>
                 </ul>
             </div>
