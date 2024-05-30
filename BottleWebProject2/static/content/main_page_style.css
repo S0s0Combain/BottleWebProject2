@@ -254,33 +254,6 @@ text_Main {
     margin-right: 10px;
 }
 
-footer div.separator {
-    background: #bbbbbb;
-    width: 100%;
-}
-
-footer {
-    display: flex;
-    margin: auto auto;
-    margin-top: 10px;
-    width: 80%;
-    margin-bottom: 5%;
-    text-align: center;
-}
-
-    footer.separator {
-        margin: 0, 0, 0, 0;
-    }
-
-    footer a {
-        font-size: 150%;
-        margin: 1px;
-    }
-
-.container-links {
-    display: block-inline;
-    margin-top: 5%;
-}
 
 .links {
     text-align: center;

@@ -106,26 +106,25 @@ body {
 
 
 footer {
-    display: flex;
-    justify-content: center;
-    margin-top: 10%;
-    width: 100%;
-    margin-bottom: 5%;
+    margin-top: 10% !important;
+    background-color: #101010;
 }
 
-footer.separator {
-        margin: 5%, 0;
-    }
-
-footer a {
-        font-size: 150%;
-        margin: 10px;
+    footer.separator {
+        margin: 5%, 0 !important;
     }
 
 .container-links {
-    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5% !important;
+    width: 100%;
 }
 
+    .container-links a {
+        font-size: 150%!important;
+        margin: 10px!important;
+    }
 .link-text:hover {
     text-decoration: underline;
 }

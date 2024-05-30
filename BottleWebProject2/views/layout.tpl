@@ -6,7 +6,17 @@
     <title>{{ title }} - My Bottle Application</title>
     <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
-    <script src="/static/scripts/modernizr-2.6.2.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/content/about_us_style.css"/>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="static/content/catalog.css"
+    />
+            <link rel="stylesheet" type="text/css" href="/static/content/main_page_style.css" />
+            <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
 </head>
 
 <body>
@@ -18,7 +28,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="/" class="navbar-brand">Application name</a>
+                <a href="/" class="navbar-brand">AnForce</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -31,7 +41,17 @@
     <div class="container body-content">
     {{!base}}
     <hr/>
-    </div>
+        </div>
+    <footer>
+        <div class="container-links">
+            <a href="https://www.instagram.com/ralphlauren/" target="_blank"><i class="fab fa-instagram" title="Go to Instagram brand"></i></a>
+            <a href="https://www.pinterest.com/ralphlauren/" target="_blank"><i class="fab fa-pinterest" title="Go to Telegram brand"></i></a>
+            <a href="https://www.facebook.com/RalphLauren/" target="_blank"><i class="fab fa-facebook" title="Go to Facebook brand"></i></a>
+            <a href="https://www.youtube.com/user/RLTVralphlauren" target="_blank"><i class="fab fa-youtube" title="Go to YouTube brand"></i></a>
+        </div>
+    </footer>
+
+        <script src="/static/scripts/modernizr-2.6.2.js"></script>
     <script src="/static/scripts/jquery-1.10.2.js"></script>
     <script src="/static/scripts/bootstrap.js"></script>
     <script src="/static/scripts/respond.js"></script>
