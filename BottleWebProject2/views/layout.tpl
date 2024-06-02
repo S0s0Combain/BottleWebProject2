@@ -34,14 +34,12 @@
                 <ul class="nav navbar-nav">
                     <li><a href="/catalog">Catalog</a></li>
                     <li><a href="/about_us">About Us</a></li>
+                    <li><a href="/articles">Articles</a></li>
                 </ul>
             </div>
         </div>
     </div>
-    <div class="container body-content">
     {{!base}}
-    <hr/>
-        </div>
     <footer>
         <div class="container-links">
             <a href="https://www.instagram.com/ralphlauren/" target="_blank"><i class="fab fa-instagram" title="Go to Instagram brand"></i></a>

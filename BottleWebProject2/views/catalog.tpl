@@ -1,5 +1,5 @@
 % rebase('layout.tpl', title='Catalog', year=year)
-    <div class="container">
+    <div class="container-catalog">
         <div class="links">
             <div class="texttt">
             AnFORCE

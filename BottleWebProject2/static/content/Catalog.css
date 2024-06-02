@@ -3,9 +3,9 @@ body {
     background-color: #ffffff; /* Чисто белый цвет фона */
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
+.container-catalog {
+    margin: 0;
+    width:100%!important;
 }
 
 .texttt {
