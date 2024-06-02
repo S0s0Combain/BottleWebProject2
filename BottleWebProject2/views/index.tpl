@@ -1,29 +1,4 @@
-<!--% rebase('layout.tpl', title='Home Page', year=year)-->
-<!DOCTYPE html>
-<html>
-     <head>
-        <meta charset="UTF-8">
-       
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Clothes Store</title>
-
-        <!--<link rel="stylesheet" type="text/css" href="static/content/about_us_style.css" />-->
-        <!--<link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" href="/static/content/site.css" />-->
-        <link rel="stylesheet" type="text/css" href="/static/content/main_page_style.css" />
-        <link
-            rel="stylesheet"
-                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        />
-       
-        <script src="/static/script/app.js" ></script>
-      </head>
-      <body>
-            %include('navbar_main.tpl')
-            <!--% rebase('layout.tpl', title='Main', year=year)-->
-
+% rebase('layout.tpl', title='Home Page', year=year)
            <div class="container_Main">
                 <h1_Main>AnForce</h1_Main>
                 <p_Main>Clothes</p_Main>
@@ -135,26 +110,6 @@
                 </a>
                
           </div>
-          <div class="footer_Main">
-            <p class="footer_Main-address">AnForce,Petersburg strasse, c.Pushkin, PPR, 11111 11111 11111</p>
-            <p class="footer_Main-phone">Phone: +7 (950) 013-0041</p>
-            <p class="footer_Main-phone">Email: darskii@gmail.com</p>
-            <footer>
-              <div class="separator">
-                  <div class="container-links">
-                    <a class="a_Spec" href="https://www.instagram.com/ralphlauren/" target="_blank"><i class="fab fa-instagram" title="Go to Instagram brand"></i></a>
-                    <a class="a_Spec" href="https://www.telegram.com/ralphlauren/" target="_blank"><i class="fab fa-telegram" title="Go to Telegram brand"></i></a>
-                    <a class="a_Spec" href="https://www.facebook.com/RalphLauren/" target="_blank"><i class="fab fa-facebook" title="Go to Facebook brand"></i></a>
-                    <a class="a_Spec" href="https://www.youtube.com/user/RLTVralphlauren" target="_blank"><i class="fab fa-youtube" title="Go to YouTube brand"></i></a>
-                  </div>
-                </div>
-            </footer>
-          </div>
-         
-
-   </body>
-	
-</html>
 
 
 
