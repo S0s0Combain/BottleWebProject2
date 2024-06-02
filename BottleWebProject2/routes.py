@@ -9,6 +9,7 @@ from datetime import datetime
 from bottle import static_file, template as templ
 import articles_handler
 import json
+import os
 
 @route('/')
 @route('/home')
@@ -45,15 +46,22 @@ def send_static(filename):
 
 @bottle.route('/articles')
 def articles():
-    try:
-        with open('articles.json', 'r') as f:
-            articles = json.load(f)
-    except FileNotFoundError:
+    # Проверяем, что файл существует и не пуст
+    if not os.path.isfile('articles.json') or os.path.getsize('articles.json') == 0:
+        # Создаем файл с пустым списком
         articles = []
         with open('articles.json', 'w') as f:
             json.dump(articles, f)
+    else:
+        # Считываем содержимое файла
+        with open('articles.json', 'r') as f:
+            articles = json.load(f)
 
+    # Сортируем статьи по дате
     articles.sort(key=lambda x: x['date'], reverse=True)
+
+    # Возвращаем шаблон с данными
     return bottle.template('articles_template.tpl', articles=articles, year=datetime.now().year)
+
 
 

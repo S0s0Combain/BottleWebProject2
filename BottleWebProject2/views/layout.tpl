@@ -28,7 +28,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="/" class="navbar-brand">AnForce</a>
+                <a href="/" class="navbar-brand" id="brand-name-header">AnForce</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
