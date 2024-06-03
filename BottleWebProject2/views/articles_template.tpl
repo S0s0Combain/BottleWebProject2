@@ -14,7 +14,7 @@
       <textarea title="Only Latin letters, numbers, spaces, and punctuation" id="description" name="description" required></textarea><br />
 
       <label for="date">Date (YYYY-MM-DD):</label>
-      <input title="Date should be in YYYY-MM-DD format." type="text" id="date" name="date" required /><br />
+      <input title="Date should be in YYYY-MM-DD format פעג can't be longer than today" type="text" id="date" name="date" required /><br />
 
       <label for="link">Link:</label>
       <input type="text" id="link" name="link" required /><br />
