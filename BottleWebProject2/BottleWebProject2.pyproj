@@ -29,6 +29,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.py" />
+    <Compile Include="articles_handler.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="routes.py" />
   </ItemGroup>
   <ItemGroup>
@@ -90,6 +93,9 @@
     <Content Include="static\scripts\respond.min.js" />
     <Content Include="static\scripts\_references.js" />
     <Content Include="views\about_us.tpl">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\articles_template.tpl">
       <SubType>Code</SubType>
     </Content>
     <Content Include="views\catalog.tpl">
