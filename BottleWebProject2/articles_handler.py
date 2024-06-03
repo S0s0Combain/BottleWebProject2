@@ -25,7 +25,7 @@ def submit_article():
         return "Description should contain only letters, numbers, spaces, and punctuation."
 
     if not check_date(date):
-        return "Date should be in YYYY-MM-DD format."
+        return "Uncorrect date."
 
 
     articles = []
@@ -51,9 +51,13 @@ def submit_article():
     return bottle.template('articles_template.tpl', articles=articles, year=datetime.now().year)
 
 def check_date(date):
-    if re.match(r'^\d{4}-\d{2}-\d{2}$', date):
-        return True
-    return False
+    try:
+        if re.match(r'^\d{4}-\d{2}-\d{2}$', date):
+            if datetime.strptime(date, '%Y-%m-%d') <= datetime.now():
+                return True
+        return False
+    except:
+        return False
 
 def check_author(author):
     if re.match(r'^[a-zA-Z0-9_]+$', author):
