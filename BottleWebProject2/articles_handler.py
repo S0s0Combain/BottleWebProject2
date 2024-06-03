@@ -13,19 +13,19 @@ def submit_article():
     link = request.forms.get('link')
 
     if not (author and title and description and date and link):
-        return "All fields are required."
+        return template('error.tpl', error_message= "All fields are required.", title='Error', year=datetime.now().year)
 
     if not check_author(author):
-        return "Author nickname should contain only letters and numbers."
+        return template('error.tpl', error_message="Author nickname should contain only letters and numbers.", title='Error', year=datetime.now().year)
 
     if not re.match(r'^[a-zA-Z0-9\s\.,-:;\'\"!?]+$', title):
-        return "Title should contain only letters and spaces."
+        return template('error.tpl', error_message="Title should contain only letters, numbers, punctuation and spaces.", title='Error', year=datetime.now().year)
 
     if not re.match(r'^[a-zA-Z0-9\s\.,-:;\'\"!?]+$', description):
-        return "Description should contain only letters, numbers, spaces, and punctuation."
+        return template('error.tpl', error_message="Description should contain only letters, numbers, spaces, and punctuation.", title='Error', year=datetime.now().year)
 
     if not check_date(date):
-        return "Uncorrect date."
+        return template('error.tpl', error_message="Uncorrect date.", title='Error', year=datetime.now().year)
 
 
     articles = []
