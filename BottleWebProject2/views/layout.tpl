@@ -35,6 +35,7 @@
                     <li><a href="/catalog">Catalog</a></li>
                     <li><a href="/about_us">About Us</a></li>
                     <li><a href="/articles">Articles</a></li>
+                    <li><a href="/reviews">Reviews</a></li>
                 </ul>
             </div>
         </div>

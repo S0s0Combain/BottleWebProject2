@@ -40,27 +40,53 @@ def about():
         year=datetime.now().year
     )
 
+
+@route('/reviews')
+@view('reviews')  # Р­С‚Рѕ РїСЂРµРґРїРѕР»Р°РіР°РµС‚, С‡С‚Рѕ Сѓ РІР°СЃ РµСЃС‚СЊ С€Р°Р±Р»РѕРЅ reviews.tpl
+def reviews():
+    """Renders the reviews page."""
+    # Р—Р°РіСЂСѓР·РёС‚СЊ РѕС‚Р·С‹РІС‹ РёР· С„Р°Р№Р»Р° РёР»Рё СЃРѕР·РґР°С‚СЊ РЅРѕРІС‹Р№ С„Р°Р№Р», РµСЃР»Рё РµРіРѕ РЅРµС‚
+    if not os.path.isfile('reviews.json') or os.path.getsize('reviews.json') == 0:
+        reviews = {}
+        with open('reviews.json', 'w') as f:
+            json.dump(reviews, f)
+    else:
+        with open('reviews.json', 'r') as f:
+            reviews = json.load(f)
+
+    # РЎРѕСЂС‚РёСЂРѕРІР°С‚СЊ РѕС‚Р·С‹РІС‹ РїРѕ РґР°С‚Рµ, РЅР°С‡РёРЅР°СЏ СЃ СЃР°РјРѕРіРѕ РЅРѕРІРѕРіРѕ
+    sorted_reviews = sorted(reviews.values(), key=lambda x: x['date'], reverse=True)
+
+    # Р’РѕР·РІСЂР°С‰Р°РµРј РґР°РЅРЅС‹Рµ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ РІ С€Р°Р±Р»РѕРЅРµ
+    return dict(
+        title='Reviews',
+        message='Reviews',
+        year=datetime.now().year,
+        reviews=sorted_reviews
+    )
+
+
 @route('/static/<filename:path>')
 def send_static(filename):
     return static_file(filename, root='static')
 
 @bottle.route('/articles')
 def articles():
-    # Проверяем, что файл существует и не пуст
+    # пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ
     if not os.path.isfile('articles.json') or os.path.getsize('articles.json') == 0:
-        # Создаем файл с пустым списком
+        # пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         articles = []
         with open('articles.json', 'w') as f:
             json.dump(articles, f)
     else:
-        # Считываем содержимое файла
+        # пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
         with open('articles.json', 'r') as f:
             articles = json.load(f)
 
-    # Сортируем статьи по дате
+    # пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ
     articles.sort(key=lambda x: x['date'], reverse=True)
 
-    # Возвращаем шаблон с данными
+    # пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     return bottle.template('articles_template.tpl', articles=articles, year=datetime.now().year)
 
 

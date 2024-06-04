@@ -4,45 +4,45 @@ import json
 import re
 from datetime import datetime
 
-# получение post-запроса
+# пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ post-пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 @bottle.route('/submit_article', method='POST')
-# функция добавления новой статьи
+# пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 def submit_article():
-    author = request.forms.get('author')  # получение никнейма автора
-    title = request.forms.get('title')  # получение заголовка статьи
-    description = request.forms.get('description')  # получение описания статьи
-    date = request.forms.get('date')  # получение даты публикации
-    link = request.forms.get('link')  # получение ссылки
+    author = request.forms.get('author')  # пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+    title = request.forms.get('title')  # пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+    description = request.forms.get('description')  # пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+    date = request.forms.get('date')  # пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+    link = request.forms.get('link')  # пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 
-    # проверка на заполненность полей
+    # пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
     if not (author and title and description and date and link):
         return template('error.tpl', error_message= "All fields are required.", title='Error', year=datetime.now().year)
 
-    # проверка на соответствие никнейма формату
+    # пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     if not check_author(author):
         return template('error.tpl', error_message="Author nickname should contain only letters and numbers.", title='Error', year=datetime.now().year)
 
-    # проверка на соответствие заголовка формату
+    # пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     if not re.match(r'^[a-zA-Z0-9\s\.,-:;\'\"!?]+$', title):
         return template('error.tpl', error_message="Title should contain only letters, numbers, punctuation and spaces.", title='Error', year=datetime.now().year)
 
-    # проверка на соответствие описания формату
+    # пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     if not re.match(r'^[a-zA-Z0-9\s\.,-:;\'\"!?]+$', description):
         return template('error.tpl', error_message="Description should contain only letters, numbers, spaces, and punctuation.", title='Error', year=datetime.now().year)
 
-    # првоерка на соответствие даты формату
+    # пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     if not check_date(date):
         return template('error.tpl', error_message="Uncorrect date.", title='Error', year=datetime.now().year)
 
-    articles = []  # пустой список статей
+    articles = []  # пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
     try:
-        # чтение данных из файла в список
+        # пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         with open('articles.json', 'r') as f:
             articles = json.load(f)
     except FileNotFoundError:
         pass
 
-    # создание словаря новой статьи
+    # пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
     new_article = {
         'author': author,
         'title': title,
@@ -51,32 +51,32 @@ def submit_article():
         'link': link
     }
     
-    # добавление статьи в список статей
+    # пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
     articles.append(new_article)
     
-    # запись списка в json-файл
+    # пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ json-пїЅпїЅпїЅпїЅ
     with open('articles.json', 'w') as f:
         json.dump(articles, f, indent=4)
 
-    # сортировка списка
+    # пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
     articles.sort(key=lambda x: x['date'], reverse=True)
     
-    # перезагрузка страницы со статьям
+    # пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     return bottle.template('articles_template.tpl', articles=articles, year=datetime.now().year)
 
-# функция проверки даты
+# пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
 def check_date(date):
     try:
-        # проверка на соответствие формату
+        # пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         if re.match(r'^\d{4}-\d{2}-\d{2}$', date):
-            # проверка на то, что дата не больше текущей
+            # пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             if datetime.strptime(date, '%Y-%m-%d') <= datetime.now():
                 return True
         return False
     except:
         return False
 
-    # функция проверки никнейма автора
+    # пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 def check_author(author):
     if re.match(r'^[a-zA-Z0-9_]+$', author):
         return True
