@@ -44,7 +44,8 @@ input[type="checkbox"].input-validation-error {
 
 .container-articles {
     display: flex !important;
-    width: 100% !important! margin: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
     justify-content: flex-start !important;
 }
 

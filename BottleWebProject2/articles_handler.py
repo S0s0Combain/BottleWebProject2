@@ -52,7 +52,7 @@ def submit_article():
     }
     
     # добавление статьи в список статей
-    articles.append(new_article)
+    articles.insert(0, new_article)
     
     # запись списка в json-файл
     with open('articles.json', 'w') as f:
