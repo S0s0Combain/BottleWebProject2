@@ -4,45 +4,45 @@ import json
 import re
 from datetime import datetime
 
-# получение post-запроса
+# РїРѕР»СѓС‡РµРЅРёРµ post-Р·Р°РїСЂРѕСЃР°
 @bottle.route('/submit_article', method='POST')
-# функция добавления новой статьи
+# С„СѓРЅРєС†РёСЏ РґРѕР±Р°РІР»РµРЅРёСЏ РЅРѕРІРѕР№ СЃС‚Р°С‚СЊРё
 def submit_article():
-    author = request.forms.get('author')  # получение никнейма автора
-    title = request.forms.get('title')  # получение заголовка статьи
-    description = request.forms.get('description')  # получение описания статьи
-    date = request.forms.get('date')  # получение даты публикации
-    link = request.forms.get('link')  # получение ссылки
+    author = request.forms.get('author')  # РїРѕР»СѓС‡РµРЅРёРµ РЅРёРєРЅРµР№РјР° Р°РІС‚РѕСЂР°
+    title = request.forms.get('title')  # РїРѕР»СѓС‡РµРЅРёРµ Р·Р°РіРѕР»РѕРІРєР° СЃС‚Р°С‚СЊРё
+    description = request.forms.get('description')  # РїРѕР»СѓС‡РµРЅРёРµ РѕРїРёСЃР°РЅРёСЏ СЃС‚Р°С‚СЊРё
+    date = request.forms.get('date')  # РїРѕР»СѓС‡РµРЅРёРµ РґР°С‚С‹ РїСѓР±Р»РёРєР°С†РёРё
+    link = request.forms.get('link')  # РїРѕР»СѓС‡РµРЅРёРµ СЃСЃС‹Р»РєРё
 
-    # проверка на заполненность полей
+    # РїСЂРѕРІРµСЂРєР° РЅР° Р·Р°РїРѕР»РЅРµРЅРЅРѕСЃС‚СЊ РїРѕР»РµР№
     if not (author and title and description and date and link):
         return template('error.tpl', error_message= "All fields are required.", title='Error', year=datetime.now().year)
 
-    # проверка на соответствие никнейма формату
+    # РїСЂРѕРІРµСЂРєР° РЅР° СЃРѕРѕС‚РІРµС‚СЃС‚РІРёРµ РЅРёРєРЅРµР№РјР° С„РѕСЂРјР°С‚Сѓ
     if not check_author(author):
         return template('error.tpl', error_message="Author nickname should contain only letters and numbers.", title='Error', year=datetime.now().year)
 
-    # проверка на соответствие заголовка формату
+    # РїСЂРѕРІРµСЂРєР° РЅР° СЃРѕРѕС‚РІРµС‚СЃС‚РІРёРµ Р·Р°РіРѕР»РѕРІРєР° С„РѕСЂРјР°С‚Сѓ
     if not re.match(r'^[a-zA-Z0-9\s\.,-:;\'\"!?]+$', title):
         return template('error.tpl', error_message="Title should contain only letters, numbers, punctuation and spaces.", title='Error', year=datetime.now().year)
 
-    # проверка на соответствие описания формату
+    # РїСЂРѕРІРµСЂРєР° РЅР° СЃРѕРѕС‚РІРµС‚СЃС‚РІРёРµ РѕРїРёСЃР°РЅРёСЏ С„РѕСЂРјР°С‚Сѓ
     if not re.match(r'^[a-zA-Z0-9\s\.,-:;\'\"!?]+$', description):
         return template('error.tpl', error_message="Description should contain only letters, numbers, spaces, and punctuation.", title='Error', year=datetime.now().year)
 
-    # првоерка на соответствие даты формату
+    # РїСЂРІРѕРµСЂРєР° РЅР° СЃРѕРѕС‚РІРµС‚СЃС‚РІРёРµ РґР°С‚С‹ С„РѕСЂРјР°С‚Сѓ
     if not check_date(date):
         return template('error.tpl', error_message="Uncorrect date.", title='Error', year=datetime.now().year)
 
-    articles = []  # пустой список статей
+    articles = []  # РїСѓСЃС‚РѕР№ СЃРїРёСЃРѕРє СЃС‚Р°С‚РµР№
     try:
-        # чтение данных из файла в список
+        # С‡С‚РµРЅРёРµ РґР°РЅРЅС‹С… РёР· С„Р°Р№Р»Р° РІ СЃРїРёСЃРѕРє
         with open('articles.json', 'r') as f:
             articles = json.load(f)
     except FileNotFoundError:
         pass
 
-    # создание словаря новой статьи
+    # СЃРѕР·РґР°РЅРёРµ СЃР»РѕРІР°СЂСЏ РЅРѕРІРѕР№ СЃС‚Р°С‚СЊРё
     new_article = {
         'author': author,
         'title': title,
@@ -51,32 +51,32 @@ def submit_article():
         'link': link
     }
     
-    # добавление статьи в список статей
+    # РґРѕР±Р°РІР»РµРЅРёРµ СЃС‚Р°С‚СЊРё РІ СЃРїРёСЃРѕРє СЃС‚Р°С‚РµР№
     articles.insert(0, new_article)
     
-    # запись списка в json-файл
+    # Р·Р°РїРёСЃСЊ СЃРїРёСЃРєР° РІ json-С„Р°Р№Р»
     with open('articles.json', 'w') as f:
         json.dump(articles, f, indent=4)
 
-    # сортировка списка
+    # СЃРѕСЂС‚РёСЂРѕРІРєР° СЃРїРёСЃРєР°
     articles.sort(key=lambda x: x['date'], reverse=True)
     
-    # перезагрузка страницы со статьям
+    # РїРµСЂРµР·Р°РіСЂСѓР·РєР° СЃС‚СЂР°РЅРёС†С‹ СЃРѕ СЃС‚Р°С‚СЊСЏРј
     return bottle.template('articles_template.tpl', articles=articles, year=datetime.now().year)
 
-# функция проверки даты
+# С„СѓРЅРєС†РёСЏ РїСЂРѕРІРµСЂРєРё РґР°С‚С‹
 def check_date(date):
     try:
-        # проверка на соответствие формату
+        # РїСЂРѕРІРµСЂРєР° РЅР° СЃРѕРѕС‚РІРµС‚СЃС‚РІРёРµ С„РѕСЂРјР°С‚Сѓ
         if re.match(r'^\d{4}-\d{2}-\d{2}$', date):
-            # проверка на то, что дата не больше текущей
-            if datetime.strptime(date, '%Y-%m-%d') <= datetime.now():
+            # РїСЂРѕРІРµСЂРєР° РЅР° С‚Рѕ, С‡С‚Рѕ РґР°С‚Р° РЅРµ Р±РѕР»СЊС€Рµ С‚РµРєСѓС‰РµР№
+            if datetime.strptime(date, '%Y-%m-%d') >= datetime.strptime('1985-01-01', '%Y-%m-%d') and datetime.strptime(date, '%Y-%m-%d') <= datetime.now():
                 return True
         return False
     except:
         return False
 
-    # функция проверки никнейма автора
+    # С„СѓРЅРєС†РёСЏ РїСЂРѕРІРµСЂРєРё РЅРёРєРЅРµР№РјР° Р°РІС‚РѕСЂР°
 def check_author(author):
     if re.match(r'^[a-zA-Z0-9_]+$', author):
         return True
